@@ -1,55 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plano de Dieta Personalizado</title>
+    <title>Gerador de Dietas Personalizadas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>🍏 Plano de Dieta Personalizado</h1>
+    </header>
 
-    <div class="container">
-        <h2>Preencha suas informações</h2>
-        <form id="dietaForm">
+    <section class="container">
+        <h2>Preencha seus dados para gerar sua dieta</h2>
+        <form id="formDieta">
             <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" required>
+            <input type="number" id="peso" placeholder="Digite seu peso" required>
 
             <label for="altura">Altura (cm):</label>
-            <input type="number" id="altura" required>
+            <input type="number" id="altura" placeholder="Digite sua altura" required>
 
             <label for="idade">Idade:</label>
-            <input type="number" id="idade" required>
+            <input type="number" id="idade" placeholder="Digite sua idade" required>
 
             <label for="objetivo">Objetivo:</label>
-            <select id="objetivo">
+            <select id="objetivo" required>
+                <option value="">Selecione...</option>
                 <option value="emagrecer">Emagrecer</option>
-                <option value="ganhar_massa">Ganhar Massa Muscular</option>
-                <option value="definir">Definição + Massa Muscular</option>
+                <option value="ganho_massa">Ganho de Massa</option>
+                <option value="definir">Definição Muscular</option>
             </select>
 
             <label for="calorias">Calorias desejadas:</label>
-            <select id="calorias">
-                <option value="1200-1500">1200-1500 kcal</option>
-                <option value="1600-1900">1600-1900 kcal</option>
-                <option value="2000-2500">2000-2500 kcal</option>
+            <select id="calorias" required>
+                <option value="">Selecione...</option>
+                <option value="1200">1200-1500 kcal</option>
+                <option value="1600">1600-1900 kcal</option>
+                <option value="2000">2000+ kcal</option>
             </select>
 
-            <label>Sexo:</label>
-            <div class="radio-group">
-                <input type="radio" id="masculino" name="sexo" value="Masculino" required>
-                <label for="masculino">Masculino</label>
-                
-                <input type="radio" id="feminino" name="sexo" value="Feminino" required>
-                <label for="feminino">Feminino</label>
-            </div>
-
-            <button type="button" onclick="gerarDieta()">Montar Minha Dieta</button>
+            <button type="submit">Montar Minha Dieta</button>
         </form>
 
         <div id="resultado"></div>
-    </div>
+    </section>
+
+    <footer>
+        <p>💡 Quer um plano mais completo? <a href="#">Baixe nosso eBook Premium!</a></p>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
