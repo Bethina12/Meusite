@@ -6,58 +6,40 @@
     font-family: Arial, sans-serif;
 }
 
+/* Estilizando o corpo da página */
 body {
     background: linear-gradient(to right, #4CAF50, #2E8B57);
-    color: #333;
+    color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 /* Container principal */
 .container {
     max-width: 500px;
-    background: #fff;
+    background: white;
     padding: 30px;
-    margin: 20px auto;
+    margin: auto;
     border-radius: 10px;
+    color: black;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Título */
-h2 {
-    margin-bottom: 20px;
-    color: #2E8B57;
-}
-
-/* Estilizando o formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Estilizando os inputs */
+/* Estilizando inputs */
 input, select {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: 0.3s;
-}
-
-/* Foco nos inputs */
-input:focus, select:focus {
-    border-color: #4CAF50;
-    outline: none;
-    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
-}
-
-/* Grupo de rádio buttons */
-.radio-group {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 /* Botão */
@@ -65,11 +47,10 @@ button {
     background-color: #4CAF50;
     color: white;
     padding: 12px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 button:hover {
@@ -83,11 +64,11 @@ button:hover {
     border-radius: 5px;
     background: #f4f4f4;
     text-align: left;
+    display: none;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-    }
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
 }
