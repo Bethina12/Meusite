@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Dieta Personalizado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Preencha suas informações</h2>
+        <form id="dietaForm">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" required>
+
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" required>
+
+            <label for="objetivo">Objetivo:</label>
+            <select id="objetivo">
+                <option value="emagrecer">Emagrecer</option>
+                <option value="ganhar_massa">Ganhar Massa Muscular</option>
+                <option value="definir">Definição + Massa Muscular</option>
+            </select>
+
+            <label for="calorias">Calorias desejadas:</label>
+            <select id="calorias">
+                <option value="1200-1500">1200-1500 kcal</option>
+                <option value="1600-1900">1600-1900 kcal</option>
+                <option value="2000-2500">2000-2500 kcal</option>
+            </select>
+
+            <label>Sexo:</label>
+            <div class="radio-group">
+                <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+                <label for="masculino">Masculino</label>
+                
+                <input type="radio" id="feminino" name="sexo" value="Feminino" required>
+                <label for="feminino">Feminino</label>
+            </div>
+
+            <button type="button" onclick="gerarDieta()">Montar Minha Dieta</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
